@@ -1,2 +1,7 @@
 # Neighbouring-Countries
-App based on RestCountries API. Showing details about neighbouring countries.
+
+### Find your country neighbours and a little information about them 🌍
+
+### Used:
+
+> - RestCountries API
