@@ -12,19 +12,228 @@ html {
 body {
   background-image: linear-gradient(
     to right bottom,
-    #fbeaff,
-    #eedbf6,
-    #e1ccec,
-    #d4bde4,
-    #c6afdb,
-    #bca3d6,
-    #b297d2,
-    #a88ccd,
-    #9f80ca,
-    #9775c8,
-    #8d69c5,
-    #845ec2
+    #fdf2ff,
+    #f3e5f7,
+    #e8d8f0,
+    #ddcce9,
+    #d2c0e2,
+    #cab6de,
+    #c2adda,
+    #b9a3d6,
+    #b29ad4,
+    #ab90d2,
+    #a487d0,
+    #9d7ece
   );
   max-width: 100%;
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HEADER ***************************************/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  row-gap: 1.8rem;
+}
+
+.header__title {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #555;
+  margin-top: 4rem;
+}
+
+.header > h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 5rem;
+  margin-bottom: 1.6rem;
+}
+
+.highlight {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  margin: 2rem 0 4rem;
+}
+
+.highlight::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-image: linear-gradient(
+    to right,
+    #b59eda,
+    #a98ed4,
+    #9d7ece,
+    #906ec8,
+    #845ec2
+  );
+}
+
+/* FORM ***************************************/
+.form {
+  display: flex;
+  margin-bottom: 2rem;
+  width: 54rem;
+  padding: 5rem;
+  box-shadow: 0 1rem 5rem 1rem rgba(132, 94, 194, 0.4);
+  background-color: #906ec8;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  transition: all 0.3s;
+}
+
+.form__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 35rem;
+  border-radius: 0.8rem;
+  margin-right: 1rem;
+  transition: all 0.3s;
+  color: #333;
+}
+
+.form__input:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px #422f61;
+}
+
+.form__input::placeholder {
+  color: #999;
+}
+
+.form__btn {
+  color: #fff;
+  display: inline-block;
+  border: none;
+  background: none;
+  font-size: 3.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form__btn:hover,
+.form__btn:focus {
+  outline: none;
+  color: #422f61;
+  transition: all 0.4s;
+  transform: scale(1.1);
+}
+
+/* COUNTY CONTAINER ***************************************/
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.message--visible {
+  padding: 1rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  width: 50rem;
+  text-align: center;
+  color: #f3eff9;
+  font-weight: bold;
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 3rem;
+  opacity: 0;
+  transition: opacity 1s;
+  flex-wrap: wrap;
+  padding: 5rem 8rem;
+}
+
+.country {
+  background-color: #fff;
+  box-shadow: 0 3rem 5rem 3rem rgba(218, 207, 237, 0.2);
+  font-size: 1.8rem;
+  width: 30rem;
+  border-radius: 0.7rem;
+  margin: 0 3rem;
+  transition: all 0.5s ease-in;
+}
+
+.neighbour::before {
+  content: "Neighbour country";
+  width: 100%;
+  position: absolute;
+  top: -4rem;
+
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.neighbour {
+  transform: scale(0.8) translateY(1rem);
+  margin-left: 0;
+}
+
+.neighbour:hover,
+.country:hover {
+  box-shadow: 0 3rem 10rem 3rem rgba(240, 237, 237, 0.425);
+  transition: all 0.3s;
+}
+
+.country__img {
+  width: 30rem;
+  height: 17rem;
+  object-fit: cover;
+  background-color: #eee;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.country__data {
+  padding: 2.5rem 3.75rem 3rem 3.75rem;
+}
+
+.country__name {
+  font-size: 2.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.country__region {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.country__row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.country__row > span {
+  display: inline-block;
+  margin-right: 2rem;
+  font-size: 2.4rem;
 }
