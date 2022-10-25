@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 63.5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    #fbeaff,
+    #eedbf6,
+    #e1ccec,
+    #d4bde4,
+    #c6afdb,
+    #bca3d6,
+    #b297d2,
+    #a88ccd,
+    #9f80ca,
+    #9775c8,
+    #8d69c5,
+    #845ec2
+  );
+  max-width: 100%;
+  min-height: 100vh;
+}
