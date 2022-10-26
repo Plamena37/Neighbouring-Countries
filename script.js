@@ -15,7 +15,7 @@ const renderCountry = function (data, className = "") {
   <h4 class="country__region">${data.region}</h4>
   <p class="country__row"><span>👫</span>${(+data.population / 1000000).toFixed(
     2
-  )} M people</p>
+  )}M people</p>
   <p class="country__row"><span>🗣️</span>${Object.values(data.languages)[0]}</p>
   <p class="country__row"><span>🌇</span>${data.capital}</p>
   <p class="country__row"><span>💰</span>${
@@ -34,6 +34,7 @@ const renderCountry = function (data, className = "") {
 const loadCountryAndNeighbour = async function (country) {
   try {
     clearMessage();
+
     //Get country
     const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
     const data = await res.json();
