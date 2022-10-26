@@ -8,4 +8,8 @@
 
 ### 🔗 Here is a preview:
 
-![Default](https://i.imgur.com/usZC81r.png)
+
+![Default](https://i.imgur.com/HpQbaKV.png)
+
+
+![Default](https://i.imgur.com/fYjutMA.png)
